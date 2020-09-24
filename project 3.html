@@ -1,0 +1,820 @@
+<!-doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <title>Fillbelly - Fill your belly</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--W3.css library-->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!--Google fonts-->
+
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+<!--Fa icons-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" href="animate.css"> -->
+<!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+
+<style>
+*{
+	margin:0;
+	pading:0;
+}
+#panel h3{
+	font-family:'kaushan script', 'cursive';
+	font-weight:bold;
+}
+#panel {
+	width:100%;
+	height:530px;
+	background-image:url("project3/32.jpg");
+    background-position: center;
+    background-size: cover;
+	font-family:'Merienda' , 'cursive';
+}
+
+#panel {
+    padding:50px;
+	display:none;
+}
+.login_optn{
+	display:inline;
+	margin-left:70px;
+}
+.box{
+	float:left;
+	margin-left:100px;
+	font-family:'Merienda' , 'cursive';
+	font-weight:bold;
+	width:500px;
+}
+input[type=text] {
+    border: none;
+    border-bottom: 2px solid red;
+	background-color:transparent;
+	font-size:20px;
+	color:white;
+}
+input[type=text]:focus{
+	border-left:6px solid red;
+	border-bottom: 0px solid red;
+}
+input[type=password] {
+    border: none;
+    border-bottom: 2px solid red;
+	background-color:transparent;
+	font-size:20px;
+	color:white;
+}
+input[type=password]:focus{
+	border-left:6px solid red;
+	border-bottom: 0px solid red;
+}
+#login_btn{
+	float:right;
+	padding:10px 40px 10px 40px;
+}
+.slideshow{
+	position: relative;
+}
+.header{
+	position:absolute;
+	width:100%;
+	z-index:1;
+}
+#logo{
+	position:relative;
+	margin:auto;
+	display:block;
+	margin-top:15px;
+	z-index:1;
+}
+.social{
+	position:absolute;
+	top:45px;
+	width:100%;
+	background:rgba(76, 34, 12,0.3);
+	-webkit-box-shadow: 0px 0px 17px 0px rgba(103, 80, 50, 1);
+	-moz-box-shadow:    0px 0px 17px 0px rgba(103, 80, 50, 1);
+	box-shadow:         0px 0px 17px 0px rgba(103, 80, 50, 1);
+}
+.social_icons1 ul{
+	list-style-type:none;
+	float:right;
+	font-size:15px;
+	padding-top:22px;
+	margin-right:50px;
+}
+.social_icons1  a{
+	color:white;
+	text-decoration:none;
+}
+.social_icons1 ul li {
+	display:inline;
+	padding-right:30px;
+}
+.social_icons ul{
+	list-style-type:none;
+	float:left;
+	margin-left:50px;
+	padding-top:18px;
+}
+.social_icons  a{
+	color:white;
+	text-decoration:none;
+}
+#rest .fa{
+	font-size:18px;
+	border:1px solid white;
+	padding:5px;
+	border-radius:5px;
+	transition: all 0.3s ease-in-out 0s; 
+}
+.social_icons  a:hover{
+	color:orange;
+}
+#rest .fa:hover{
+	font-size:22px;
+	border:1px dotted orange;
+	background-color:orange;
+	color:white;
+	transform: rotate(360deg);
+    transition: all 0.3s ease-in-out 0s;
+}
+.social_icons ul li {
+	display:inline;
+	padding-right:30px;
+}
+.social_icons1 a:hover{
+	border-bottom:4px dotted orange;
+	color:white;
+}
+#section1{
+	position:absolute;
+	top:230px;
+	left:330px;
+	z-index:1;
+	color:white;
+	background:rgba(76, 34, 12,0.6);
+	padding:10px 20px;
+}
+#section1 button{
+	background-color:orange;
+	color:white;
+}
+#section1  button:focus {outline:0;}
+
+#section1 button:hover{
+	background-color:#fc964e;
+	box-shadow:0px 0px 17px 0px rgba(103, 80, 50, 1) inset;
+}
+
+.navbar1{
+	background-color:black;
+	overflow-x:hidden;
+	font-family:Merienda;
+}
+.navbar1 p{
+	display:inline;
+	color:white;
+	font-size:13px;
+	margin-left:15px;
+	margin-right:15px;
+	
+}
+.navbar1 a{
+	color:white;
+	text-decoration:none;
+}
+.navbar1 a:hover{
+	color:orange;
+	text-decoration:none;
+	border-bottom:1px dotted orange;
+}
+
+.sticky{
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index:1;
+}
+.whatIsHere{
+	overflow:hidden;
+}
+.container1 {
+	position: relative;
+	width: 50%;
+	overflow:hidden;
+	display: table-cell;
+}
+
+.image1 {
+	display:table-cell;
+	width: 100%;
+	height: 300px;
+	transition: all .4s ease-in;
+}
+.text{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 300px;
+	color: white;
+	text-align:center;
+	padding-top:50px;
+	background:rgba(76, 34, 12,0.4);
+	font-family:Merienda;
+}
+
+.text p{
+	background-color:black;
+	border:1px solid white;
+	font-size:15px;
+	padding:10px 20px;
+	display:inline;
+	cursor:pointer;
+}
+.text p:hover {
+	background-color:white;
+	color:black;
+}
+.text p a{ 
+	color:white;
+	text-decoration:none;
+}
+.text p:hover a{
+	color:black;
+}
+.overlay {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 300px;
+	  opacity: 0;
+	  transition: .5s ease;
+	  background-color: rgba(50,50,50,0.7);
+  
+ }
+.container1:hover .text{
+	 color: white;
+	 z-index:1;
+}
+.container1:hover .overlay{
+	opacity: 1;
+ 
+}
+.container1:hover .image1 {
+	transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+ 
+}
+.container1:hover .fa{
+	font-size:30px;
+	border:1px dotted orange;
+	background-color:orange;
+	color:white;
+	transform: rotate(360deg);
+    transition: all 0.3s ease-in-out 0s;
+
+}
+.container2:hover .overlay{
+	opacity: 1;
+  
+}
+.container2:hover .fa{
+	font-size:30px;
+	border:1px dotted orange;
+	background-color:orange;
+	color:white;
+	transform: rotate(360deg);
+    transition: all 0.3s ease-in-out 0s;
+
+}
+.container2:hover .image2 {
+	  transform: scale(1.2);
+	  -webkit-transform: scale(1.2);
+}
+.container2:hover .text{
+	 color: white;
+	 z-index:1;
+}
+.container2 {
+	  position: relative;
+	  width: 50%;
+	  overflow:hidden;
+	  display: table-cell;
+}
+.image2 {
+	  display: table-cell;
+	  width: 100%;
+	  height: 300px;
+	  transition: all .4s ease-in;
+}
+.aa{
+	display:table-row;
+}
+.text .fa{
+font-size:30px;
+border:1px solid white;
+padding:10px 20px;
+}
+
+.menu {
+    display: none;
+	
+	}
+#ourMenu{
+	font-family:Merienda;
+	font-size:30px;
+	color:black;
+	margin:50px;
+	font-weight:bold;
+}
+.bgimf{
+	background-image:url("project3/10.jpg");
+	min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}	
+#gallery{
+	background-image:url("project3/15.jpg");
+	min-height: 100%;
+	background-size: cover;
+	font-family:Merienda;
+	background-attachment:fixed;
+	font-size:30px;
+	color:black;
+	font-weight:bold;
+	padding:30px;
+
+}
+
+#gallery img:hover {
+	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+#reviews {
+	  margin: 80px auto;
+	  position: relative;
+	  width: 740px;
+	  height: 300px;
+	  padding: 10px;
+	  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+#reviews > div {
+	  position: absolute;
+	  top: 10px;
+	  left: 10px;
+	  right: 10px;
+	  bottom: 10px;
+}
+#reviw{
+	font-family:Merienda;
+	font-size:30px;
+	color:black;
+	margin:50px;
+	font-weight:bold;
+}
+#reviews h4{
+	font-family:Tangerine;
+	background-color:black;
+	color:white;
+	font-size:30px;
+	padding-top:10px;
+}
+
+#reviews h5{
+	margin-top:20px;
+	font-family:Merienda;
+	font-weight:bold;
+	font-size:20px;
+	color:black;
+}
+ 
+#reviews:hover img{
+	border:3px solid orange;
+    border-radius: 100%;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+} 
+.feedback{
+	background: #ffe259; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #ffe259, #ffa751); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #ffe259, #ffa751); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#contact{
+	background-image:url("project3/32.jpg");
+	min-height: 100%;
+	background-size: cover;
+	background-attachment:fixed;
+}
+#contact_headng {
+	font-family:Merienda;
+	font-size:30px;
+	color:white;
+	margin:50px;
+	font-weight:bold;
+}
+.socialLinks {
+	margin-top:50px;
+	font-size:30px;
+	color:orange;
+}
+.socialLinks:hover{
+	cursor:pointer;
+}
+.footer .glyphicon {
+	margin-top:20px;
+	color:orange;
+}
+
+
+</style>
+
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+</script>
+
+</head>
+
+<body>
+<!---------------------------Login form---------------------------------->
+<div id="panel">
+	<button onclick="closeWin()" class="w3-bar-item w3-button w3-large w3-mobile w3-hover-none w3-hover-text-orange w3-padding-16" ><span class="w3-display-topright" style="font-size:50px;margin-right:40px;color:white">&times;</span></button>
+ <div class="w3-content">
+	<h3 class="w3-text-white w3-center">LOGIN/REGISTER</h3><hr>
+	<p class="w3-text-orange w3-center">Enter your email and password to sign in</p>
+	<div class="box">
+		<form class="w3-container w3-text-white">
+				<p><input class="w3-input" id="email" type="text" name="user" onclick="start(this)" required ><label>E-mail*</label></p>
+				<p><input class="w3-input"  id="passwrd" type="password" name="password" onclick="start(this)" required><label>Password*</label></p>	
+			
+				<button class="w3-btn w3-orange" id="login_btn" onclick="loginn_btn()"><a href="#" style="text-decoration:none;color:white">      Log In    </a></button></br></br></br>
+		</form>
+			
+		<div class="login_optn">
+			<button class="w3-btn w3-blue"><a href="https://www.facebook.com/" target="_blank" style="text-decoration:none;color:white">Login with Facebook</a></button>
+			<button class="w3-btn w3-red" ><a href="https://plus.google.com" target="_blank" style="text-decoration:none;color:white">Login with Google+</a></button>
+		</div>	  
+	</div>
+ </div>
+</div>
+<!-------------------------------------------------------------Slideshow-------------------------------------->
+<div class="slideshow">
+	<div class="header" class="text-center">
+		<img id="logo" src="project3/header-logo.png" width="130px" height="130px"/>
+	<div class="social">
+	<div class="social_icons1">
+	<ul>
+		<li style="font-family:Merienda"><a href="#" id="flip">Login/Register</a></li>
+		
+	
+		
+		<li style="font-family:Merienda"><a href="#"><span class="glyphicon glyphicon-phone-alt"></span> 044 3318 5037 </a></li>
+	</ul>
+	</div>
+<!--Social icons-->
+	<div class="social_icons" >
+	<ul id="rest">
+		<li><a href="https://play.google.com/store?hl=en"><img src="project3/app-link3.png" width="120px"></a></li>
+		<li class="1"><a href="https://www.twitter.com"><i class="fa fa-twitter" class="icon" title="twitter"></i></a></li>
+		<li class="2"><a href="https://www.facebook.com"><i class="fa fa-facebook" class="icon" title="Facebook"></i></a></li>
+		<li class="3"><a href="https://www.instagram.com"><i class="fa fa-instagram" class="icon" title="instagram"></i></a></li>
+		<li><a href="https://www.gmail.com"><i class="fa fa-envelope"class="icon" title="Messenger"></i></a></li>
+	</ul>
+	</div>
+    </div>
+    </div>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+	<li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
+<!-- Wrapper for slides -->
+	<div class="carousel-inner">
+		<div class="item active">
+				<img src="project3/4.jpg" alt="Herbal and sidda medicine" style="width:100%;height:100%">
+			<div class="text-center" id="section1">
+		<div class="row">
+			<div class="col-md-12 ">
+			<h2 id="intro" style="font-family:Tangerine;font-size:80px">Welcome to <b style="color:orange">fillbelly</b> </h2> 
+			<h2 id="intro1" style="font-family:Merienda"> <b> Cooking with LOVE provides food for the SOUL </b> <br><br>Let's COME,Fill your belly with <b style="color:orange;font-family:Tangerine;font-size:50px">fillbelly</b> </h2> 
+			<br>
+			<a href="#"><button type="button" class="btn btn-lg" > Order now </button></a>
+			</div>
+		</div>
+			</div>
+		</div> 
+		<div class="item">
+			<picture>
+			<source media="(max-width: 479px)" srcset="project3/header-logo.png">
+			<img src="project3/slide02.jpg" alt="Hair regrowth" style="width:100%;height:100%"> 
+			</picture>
+		</div> 
+		<div class="item">
+			<img src="project3/slide01.jpg" alt="Herbal and sidda medicine" style="width:100%;height:100%">
+		</div>  
+		<div class="item">
+			<img src="project3/slide03.jpg" alt="Herbal coffee" style="width:100%;height:100%">
+		</div>
+			
+	</div>
+</div>
+</div>
+<!--------------------------------------------------Navigation bar---------------------------------------->
+<div class="navbar1 sticky">
+	<div class="text-center" >
+		<p ><a href="#">HOME</a></p>
+		<p><a href="about_us.html" target="_self">ABOUT US</a></p>
+		<p><a href="#menu">MENU</a></p>
+		<p><a href="offers.html" target="_self">OFFERS</a></p>
+		<img  src="project3/header-logo.png" width="70px" height="70px"/> 
+		<p><a href="#gallery">GALLERY</a></p>
+		<p><a href="#reviw">REVIEWS</a></p>
+		<p><a href="#contact">CONTACT US</a></p>
+	</div>
+</div> 
+<!---------------------------------------------------Page content-------------------------------------------->
+<div class="container1">
+	<img src="project3/6.jpg" alt="Le Tricolore Smartwatch"  class="image1">
+	<div class="text">
+		<i class="fa fa-cutlery" aria-hidden="true"></i>
+		<h4>WHO WE ARE?</h4>
+		<h3>WANNA KNOW ABOUT US</h3><br>
+		<p><a href="about_us.html" >More</a></p>
+	</div>
+	<div class="overlay"></div>
+</div>
+<div class="container1">
+	<img src="project3/OFFERS.jpg" alt="Le Tricolore Smartwatch"  class="image1">
+	<div class="text">
+		<i class="fa fa-gift" aria-hidden="true"></i>
+		<h4>OFFERS</h4>
+		<h3>JUST FOR YOU</h3><br>
+		<p><a href="offers.html">More</a></p>
+	</div>
+	<div class="overlay"></div>
+</div>
+<div class="aa">
+	<div class="container2">
+	<img src="project3/9.jpg" alt="Le Tricolore Smartwatch"  class="image2">
+	<div class="text">
+		<i class="fa fa-bars" aria-hidden="true"></i>
+		<h4>OUR MENU</h4>
+		<h3>THREE STYLE AT ONE PLACE</h3><br>
+		<p><a href="#menu">More</a></p>
+	</div>
+	<div class="overlay"></div>
+	</div>
+	<div class="container2">
+	<img src="project3/7.png" alt="Le Tricolore Smartwatch"  class="image2">
+	<div class="text">
+		<i class="fa fa-camera" aria-hidden="true"></i>
+		<h4>TAKE A LOOK</h4>
+		<h3>AT OUR PHOTOS</h3><br>
+		<p><a href="#gallery">More</a></p>
+	</div>
+	<div class="overlay"></div>
+	</div>
+</div>
+<!-----------------------------------------DElightful Menu--------------------------------------------->
+<div class="w3-container bgimf" id="menu" >
+<div class="w3-content"  style="max-width:700px">
+	<h5 class="w3-center" id="ourMenu">OUR MENU</h5>
+	<div class="w3-row w3-center w3-card w3-black w3-medium  w3-wide">
+		<a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+			<div class="w3-col s6 tablink w3-text-white w3-large w3-hover-orange w3-padding">TamilNadu Style Menu</div>
+		</a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+			<div class="w3-col s6 tablink  w3-text-white w3-large w3-hover-orange w3-padding">Hydrabadi Style Menu</div>
+      </a>
+    </div>
+
+    <div id="Eat" class="w3-container menu  w3-padding-48 w3-card ">
+      <h5 class="w3-xlarge w3-text-black">Mutton Biriyani ( 1kg rice: 1.5kg Mutton)<span class="w3-text-grey">................</span><span class="w3-text-white w3-black">1750</span></h5>
+      <br>
+    
+      <h5 class="w3-xlarge w3-text-black">Veg Biriyani<span class="w3-text-grey">.............................................................</span><span class="w3-text-white w3-black">850</span></h5>
+      <br>
+    
+      <h5 class="w3-xlarge w3-text-black">Pepper Chicken<span class="w3-text-grey">.......................................................</span><span class="w3-text-white w3-black">650</span></h5>
+      <br>
+    
+       <h5 class="w3-xlarge w3-text-black">Chicken Biriyani ( 1kg rice: 1.5kg Chicken)<span class="w3-text-grey">.............</span><span class="w3-text-white w3-black">1350</span></h5> <br>
+	  
+      <h5 class="w3-xlarge w3-text-black">Chicken 65<span class="w3-text-grey">...............................................................</span><span class="w3-text-white w3-black">650</span></h5>
+      <br>
+	  
+      <h5 class="w3-xlarge w3-text-black">Quarter Bread Halwa<span class="w3-text-grey">...............................................</span><span class="w3-text-white w3-black">250</span></h5>
+      
+    </div>
+
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+      <h5 class="w3-xlarge w3-text-black">Mutton Biriyani ( 1kg rice: 1.5kg Mutton)<span class="w3-text-grey">................</span><span class="w3-text-white w3-black">1800</span></h5>
+      <br>
+    
+      <h5 class="w3-xlarge w3-text-black">Dum Pukht Biryani<span class="w3-text-grey">..................................................</span><span class="w3-text-white w3-black">850</span></h5>
+      <br>
+    
+      <h5 class="w3-xlarge w3-text-black"> Hyderabadi Marag<span class="w3-text-grey">..................................................</span><span class="w3-text-white w3-black">650</span></h5>
+      <br>
+    
+       <h5 class="w3-xlarge w3-text-black">Chicken Biriyani ( 1kg rice: 1.5kg Chicken)<span class="w3-text-grey">............</span><span class="w3-text-white w3-black">1400</span></h5> <br>
+	  
+      <h5 class="w3-xlarge w3-text-black">Chicken 65<span class="w3-text-grey">..............................................................</span><span class="w3-text-white w3-black">650</span></h5>
+      <br>
+	  
+      <h5 class="w3-xlarge w3-text-black">Maghaz Masala<span class="w3-text-grey">.......................................................</span><span class="w3-text-white w3-black">250</span></h5>
+    </div> 
+  
+ </div> 
+</div>
+  <!--------------------------------------------------- Gallery  ------------------------------------------------->
+  
+<div class="w3-container" id="gallery">
+	<h2 class="w3-center  w3-wide  w3-padding-32">GALLERY</h2>
+
+	
+<!-- Overlay effect when opening sidebar on small screens -->
+	<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Push down content on small screens --> 
+	<div class="w3-hide-large" style="margin-top:83px"></div>
+
+
+   <!-- Photo grid -->
+  <div class="w3-row" style="cursor:pointer">
+    <div class="w3-third">
+	<img src="project3/4.jpg" style="width:100%" onclick="onClick(this)" title="Chicken Kebab" alt="Chicken Kebab">
+	<img src="project3/5.jpg" style="width:100%" onclick="onClick(this)" title="Mutton" alt="Mutton">
+    <img src="project3/7.png" style="width:100%" onclick="onClick(this)" title="Quarter Bread Halwa"  alt="Quarter Bread Halwa">
+   </div>
+
+   <div class="w3-third">
+      <img src="project3/11.jpg" style="width:100%" onclick="onClick(this)" title="Spicy Biriyani" alt="Spicy Biriyani">
+      <img src="project3/12.jpg" style="width:100%" onclick="onClick(this)" title="Hyderabadi Biriyani" alt="Hyderabadi Biriyani">
+      <img src="project3/21.jpg" style="width:100%;height:250px" onclick="onClick(this)" alt="Our Special Mutton recepie..At its finest!" title="Our Special Mutton recepie..At its finest!">
+   </div>
+    
+   <div class="w3-third">
+      <img src="project3/23.png" style="width:100%" onclick="onClick(this)" alt="Yummi kesari" title="Yummi Kesari">
+      <img src="project3/22.jpg" style="width:100%" onclick="onClick(this)" alt="Our Traditional Biriyani" title="Our Traditional Biriyani">
+   </div>
+  </div>
+</div> 
+<!-------------------------------------------- Image in new tab with CAption --------------------------------->
+<div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+<!--------------------------------------------------Reviews------------------------------------------------------------>
+<div class="w3-container feedback">
+	<h5 class="w3-center" id="reviw">REVIEWS</h5>
+	<div id="reviews">
+		<div class="w3-center">
+			<img src="project3/25.png" class="w3-circle image" alt="Man" width="80px" height="80px">
+			<h4>Aditya Menon</h4>
+			<h5>This is hands down one of the best biryanis I've had till date !!! Toooo Gud !!! The chicken was cooked to perfection and the taste was not mind blowing it was mind blasting.</h5>
+		</div>
+		<div class="w3-center">
+			<img src="project3/26.jpg" class="w3-circle image" alt="Man" width="80px" height="80px">
+			<h4>Madhubala Manjari</h4>
+			<h5>Yes the biryani is absolutely amazing to order from here can sit at home and enjoy delicious. My sister especially loves the food and insists we always order from here.</h5>
+		</div>
+		<div class="w3-center">
+			<img src="project3/25.jpg" class="w3-circle image" alt="Man" width="80px" height="80px">
+			<h4>Abdul Rahman</h4>
+			<h5>I had biriyani after seeing reviews. It wasn't that great. No proper mutton piece. My parents relatives friends were pissed off for my suggestion. Taste was good but no mutton piece just had Kuska try to give good pieces when we ordering 24hrs in advance we expect to be perfect.</h5>
+		</div>
+		<div class="w3-center">
+			<img src="project3/25.jpg" class="w3-circle" alt="Man" width="80px" height="80px">
+			<h4>Anand Shree</h4>
+			<h5>The hyderabadi biryani here is simply awesome. We had ordered here for a small family gathreing and everyone in our family loved it. I am not a fan of hyderabadi biryani but some members in our family who came from hyderabad said that it was delicious and authentic. I loved it too with the gravy that accompanied the biryani. Thank you filly belly - the gathering went well and everyone enjoyed the tasty biryani.</h5>
+		</div>
+		<div class="w3-center">
+			<img src="project3/26.jpg" class="w3-circle" alt="Man" width="80px" height="80px">
+			<h4>Mitra Ajay Chaukulkar</h4>
+			<h5>Thanks for accepting a request and sending across mutton biryani which was relished by both the biryani lovers in the house as they are not in favour of having the sticky biryani.</h5>
+		</div>
+	</div>
+</div>
+<!--------------------------------------------------------Contact--------------------------------------------------------------->
+
+<div class="w3-container w3-center" id="contact">
+	<h5 class="w3-center" id="contact_headng">WE ARE HERE</h5>
+	<div id="googleMap" class="w3-grayscale" style="width:100%;height:350px;margin-top:50px"></div>
+<div class="socialLinks">
+		<i class="fa fa-facebook-official w3-hover-opacity w3-large" title="Facebook"></i>
+        <i class="fa fa-instagram w3-hover-opacity w3-large" title="instagram"></i>
+        <i class="fa fa-snapchat w3-hover-opacity w3-large" title="snapchat"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity w3-large" title="Pinterest"></i>
+        <i class="fa fa-twitter w3-hover-opacity w3-large" title="twitter"></i>
+        <i class="fa fa-linkedin w3-hover-opacity w3-large" title="Linkedin"></i>
+</div>
+<div class="footer">
+		<a href="#logo" title="Go Top" id="top_icon">
+		<span class="glyphicon glyphicon-chevron-up"></span>
+		</a>
+</div>
+</div>
+<script>
+//LOGIN/REGISTER
+var myWindow;
+function closeWin() {
+    myWindow = window.open("project 3.html", "_self");
+}
+var emil_input,psswd_input;
+	function start(option){
+		emil_input=option.value; 
+		psswd_input=option.value; 	
+	}
+
+	function loginn_btn(){
+		if(emil_input == null && psswd_input == null){
+			alert("Enter both E-mail id and password");
+		}
+		
+		else{
+			alert("Registered Successfully");
+			location.href = "project 3.html";
+		}
+}
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-orange", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-orange";
+}
+document.getElementById("myLink").click();
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+//Reviews 
+$("#reviews > div:gt(0)").hide();
+setInterval(function() {
+  $('#reviews > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#reviews');
+}, 3000);
+
+//location Google Maps 
+function myMap()
+{
+  myCenter=new google.maps.LatLng(13.1136,80.2961);
+  var mapOptions= {
+    center:myCenter,
+    zoom:12, scrollwheel: false, draggable: false,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0jAGQTxiaU0dbc2-5tcOuP27rtcNnIgs&callback=myMap"></script>
+
+</body>
+</html>
