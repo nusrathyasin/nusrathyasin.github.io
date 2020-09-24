@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+<!--W3css host-->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!--jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<style>
+#panel h3{
+font-family:'kaushan script', 'cursive';
+font-weight:bold;
+}
+#panel {
+	width:100%;
+	height:530px;
+  
+    //text-align: center;
+    //background-color: #e5eecc;
+    //border: solid 1px #c3c3c3;
+
+	background-image:url("project3/32.jpg");
+    
+    background-position: center;
+    background-size: cover;
+	//background-attachment:fixed;
+font-family:'Merienda' , 'cursive';
+}
+
+#panel {
+    padding:50px;
+	display:none;
+}
+.login_optn{
+display:inline;
+margin-left:70px;
+}
+.box{
+float:left;
+margin-left:100px;
+font-family:'Merienda' , 'cursive';
+	font-weight:bold;
+	width:500px;
+}
+input[type=text] {
+    border: none;
+    border-bottom: 2px solid red;
+	background-color:transparent;
+	font-size:20px;
+	color:white;
+}
+input[type=text]:focus{
+	border-left:6px solid red;
+	border-bottom: 0px solid red;
+}
+input[type=password] {
+    border: none;
+    border-bottom: 2px solid red;
+	background-color:transparent;
+	font-size:20px;
+	color:white;
+}
+input[type=password]:focus{
+	border-left:6px solid red;
+	border-bottom: 0px solid red;
+}
+#login_btn{
+float:right;
+padding:10px 40px 10px 40px;
+}
+</style>
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+</script>
+</head>
+<body>
+<div id="panel">
+<button onclick="closeWin()" class="w3-bar-item w3-button w3-large w3-mobile w3-hover-none w3-hover-text-orange w3-padding-16" ><span class="w3-display-topright" style="font-size:50px;margin-right:40px;color:white">&times;</span></button>
+<div class="w3-content">
+<h3 class="w3-text-white w3-center">LOGIN/REGISTER</h3><hr>
+<p class="w3-text-orange w3-center">Enter your email and password to sign in</p>
+
+<div class="box">
+ <form class="w3-container w3-text-white">
+				<p><input class="w3-input" id="email" type="text" name="user" onclick="start(this)" required ><label>E-mail*</label></p>
+				<p><input class="w3-input"  id="passwrd" type="password" name="password" onclick="start(this)" required><label>Password*</label></p>	
+			
+				<button class="w3-btn w3-orange" id="login_btn" onclick="loginn_btn()"><a href="#" style="text-decoration:none;color:white">      Log In    </a></button></br></br></br>
+				
+			  </form>
+			
+		<div class="login_optn">
+<button class="w3-btn w3-blue"><a href="https://www.facebook.com/" target="_blank" style="text-decoration:none">Login with Facebook</a></button>
+<button class="w3-btn w3-red" ><a href="https://plus.google.com" target="_blank" style="text-decoration:none">Login with Google+</a></button>
+</div>	  
+</div>
+</div>
+</div>
+<button id="flip">Login</button>
+
+<script>
+var myWindow;
+function closeWin() {
+    myWindow = window.open("project 3.html", "_self");
+}
+var emil_input,psswd_input;
+	function start(option){
+		emil_input=option.value; 
+		psswd_input_input=option.value; 	
+	}
+
+	function loginn_btn(){
+		if(emil_input == null && psswd_input == null){
+			alert("Enter both E-mail id and password");
+		}
+		
+		else{
+			alert("Registered Successfully");
+			location.href = "PortfolioFinal - suhel.html";
+		}
+	}
+</script>
+</body>
+</html>
